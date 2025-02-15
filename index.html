@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Электронный Стетоскоп</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+</head>
+<body>
+
+<header id="home">
+    <h1>Электронный Стетоскоп</h1>
+    <p>Ваш помощник в ранней диагностике заболеваний легких.</p>
+</header>
+
+<section class='hero'>
+    <!-- Большое фото устройства -->
+    <img src='title.jpg' alt='Электронный стетоскоп' />
+</section>
+
+<section id="products" class="products">
+    <h2>Доступные версии</h2>
+
+    <!-- Карусель для изображений продуктов -->
+    <div class="product-carousel">
+        <div><img src="tracker.jpg" alt="Версия Tracker"></div>
+        <div><img src="profi.jpg" alt="Версия Profi"></div>
+        <div><img src="telemed.jpg" alt="Версия Telemed"></div>
+    </div>
+
+   <!-- Описание продуктов -->
+   <div class='product-description'>
+       <h3>Tracker</h3>
+       <p>Умное устройство для постоянного мониторинга здоровья легких.</p>
+
+       <h3>Profi</h3>
+       <p>Профессиональный выбор для точной аускультации.</p>
+
+       <h3>Telemed</h3>
+       <p>Подключается к медицинским работникам удаленно для лучшего ухода.</p>
+   </div>
+
+</section>
+
+<section id='diagnosis-info' class='diagnosis-info'>
+   <h2>Ранняя диагностика имеет значение!</h2>
+   <p>Этот электронный стетоскоп помогает выявлять такие состояния, как пневмония и бронхит на ранних стадиях, обеспечивая своевременное лечение.</p>
+</section>
+
+<footer>&copy; 2023 Пермь Электронный Стетоскоп Inc.</footer>
+
+<script>
+// Инициализация карусели
+$(document).ready(function(){
+  $('.product-carousel').slick({
+      dots: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 1,
+      adaptiveHeight: true
+  });
+});
+</script>
+
+<style>
+
+/* CSS стили */
+* {
+     box-sizing: border-box;
+}
+
+body {
+     font-family: Arial, sans-serif;
+     margin: 0;
+     padding: 20px;
+}
+
+header {
+     text-align: center;
+     background-color: #4CAF50;
+     color: white;
+     padding: 10px 0;
+}
+
+.hero img {
+     width: 100%; /* Адаптивная ширина изображения */
+}
+
+.products {
+     text-align:center; 
+ }
+
+.product-carousel img {
+     width :100%; /* Ширина изображений в карусели */
+ }
+
+.product-description h3{
+   margin-top :20px ;
+}
+
+.diagnosis-info {
+   text-align:center; 
+   margin-top :20px; 
+   background-color:#f9f9f9; 
+   padding :15px ; 
+   border-radius :5px ; 
+}
+
+footer {
+text-align:center; 
+margin-top :20px ;
+}
+@media (max-width:768px){
+ .hero img {width:auto;}
+}
+</style>
+
+
+</body></html>
